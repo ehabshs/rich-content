@@ -9,6 +9,9 @@
 > - :house: [Internal]
 
 ## [Unreleased]
+### :house: Internal
+- `general`
+  - [#259](https://github.com/wix-incubator/rich-content/pull/259) react 16
 
 <hr/>
 
