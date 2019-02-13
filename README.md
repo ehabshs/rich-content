@@ -22,6 +22,26 @@ To install this package as viewer, use the following command:
 npm install --save wix-rich-content-viewer
 ```
 
+To use the editor with `<script>` tag, consume the following JS file: `dist/Common.js` and `dist/Editor.js` from the bundle, and load the matching CSS files:
+
+```html
+<html>
+<head>
+  <script src="https://unpkg.com/wix-rich-content-common/dist/Common.js"></script>
+  <script src="https://unpkg.com/wix-rich-content-editor/dist/Editor.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/wix-rich-content-common/dist/styles.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/wix-rich-content-editor/dist/styles.min.css" />
+</head>
+<body>
+    <script>
+    const { RichContentEditor, EditorState } = window.WixRichContentEditor;
+    </script>
+
+    <!-- ...rest of your app code... -->
+</body>
+</html>
+```
+
 ## Getting Started
 
 ### 1. Basic Editor
@@ -86,7 +106,7 @@ import 'wix-rich-content-plugin-...'/dist/styles.min.css';
 
 ### 2. Add Plugins
 
-To add plugins to your editor, choose one of the implemented plugins from [the list of available plugins](`./pacakges/`).
+To add plugins to your editor, choose one of the implemented plugins from [the list of available plugins](https://github.com/wix-incubator/rich-content/tree/master/packages).
 
 Install the plugin you wish use from NPM:
 
@@ -255,6 +275,8 @@ The compiled package also contains a CommonJS bundle, which you can consume if y
 [rich-content-editor-example](./examples/editor) to see how to consume the Component as an editor.
 
 [rich-content-viewer-example](./examples/viewer) to see how to consume the Component as a viewer.
+
+[rich-content-viewer-ssr](./examples/viewer-ssr) to see how to consume the Component as a viewer within a Yoshi-based SSR Application.
 
 [rich-content-editor-tpa](./examples/editor-tpa) to see how to consume the Component as an editor within a Wix Third Party Application.
 

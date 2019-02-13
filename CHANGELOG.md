@@ -10,8 +10,134 @@
 
 ## [Unreleased]
 
+<hr/>
+
+## 2.0.4 (Feb 10, 2019)
+
+### :bug: Bug Fix
+- `general`
+  - [#253](https://github.com/wix-incubator/rich-content/pull/253) fix statics copy in package.json
+- `html`
+  - [#253](https://github.com/wix-incubator/rich-content/pull/253) fix instagram too wide for mobile
+
+<hr/>
+
+## 2.0.3 (Feb 10, 2019)
+
+### :rocket: New Feature
+- `viewer`
+  - [#246](https://github.com/wix-incubator/rich-content/pull/246) fix headers inside of lists to be semantically correct 
+- `headersMarkdown`
+  - [#246](https://github.com/wix-incubator/rich-content/pull/246) whoo hoo :) new plugin for headers markdown 
+
+### :bug: Bug Fix
+- `image`
+  - [#250](https://github.com/wix-incubator/rich-content/pull/250) reduce default preload size to 300px
+
+### :house: Internal
+- `general`
+  - [b9a6f13](https://github.com/wix-incubator/rich-content/commit/b9a6f1354ab3cd00afd226f9aab777dfab4676cb) force publish all modules with each release
+
+<hr/>
+
+## 2.0.2 (Feb 7, 2019)
+
 ### :bug: Bug Fix
 
+- `html`
+  - [#248](https://github.com/wix-incubator/rich-content/pull/248) use 'auto' width on mobile
+- `image`
+  - [#249](https://github.com/wix-incubator/rich-content/pull/249) original size support for mobile cuts off full size images
+- `viewer`
+  - [#249](https://github.com/wix-incubator/rich-content/pull/249) original size support for mobile cuts off full size images
+
+<hr/>
+
+## 2.0.1 (Feb 4, 2019)
+### :bug: Bug Fix
+- `general`
+  - [#242](https://github.com/wix-incubator/rich-content/pull/242) move error boundary from img/video plugins to atomic block wrapper
+  - [#ca4c5da](https://github.com/wix-incubator/rich-content/commit/ca4c5dad0b4f817ff46dcb1b55702cf9bfeb4523) fixed babel-jest error
+- `viewer`
+  - [#244](https://github.com/wix-incubator/rich-content/pull/244) wrap atomic blocks with links instead of positioning a sibling
+
+<hr/>
+
+## 2.0.0 (Jan 28, 2019)
+
+_NOTE:_ From this version onwards all modules will have the same version number, no more independent versioning.
+
+### :boom: Breaking Change
+
+- `common`
+  - [#235](https://github.com/wix-incubator/rich-content/pull/235) add dropdown support in link panel. Breaking changes in all link panel users: `plugin-link`, `plugin-image` and `plugin-gallery`
+
+### :rocket: New Feature
+
+- `giphy`
+  - [#236](https://github.com/wix-incubator/rich-content/pull/236) Add extra customization options to giphy plugin
+
+### :bug: Bug Fix
+
+- `video`
+  - [#238](https://github.com/wix-incubator/rich-content/pull/238) Vimeo - urls not prefixed with http[s] didn't work
+- `viewer`
+  - [708c9a8](https://github.com/wix-incubator/rich-content/commit/708c9a843ce8a48841ef98c13ac211524acf3fb7) render empty container div when there is no content
+  - [#240](https://github.com/wix-incubator/rich-content/pull/240) add componentDidCatch, render null for img or video plugins instead of crashing
+
+### :house: Internal
+
+- `general`
+  - [#239](https://github.com/wix-incubator/rich-content/pull/239) prettier formatter
+- `common`
+  - [c6b143d](https://github.com/wix-incubator/rich-content/commit/c6b143dc792b3d9c6f7892bf24db1818bc7f4cd9) validate plugin schema only in development
+
+<hr/>
+
+## Video Plugin 1.6.0 (Jan 20, 2019)
+
+### :rocket: New Feature
+
+[#234](https://github.com/wix-incubator/rich-content/pull/234) thumbnail support - if you are using relative URLs this requires changes
+
+<hr/>
+
+## Image Plugin 1.5.12 (Jan 20, 2019)
+
+### :bug: Bug Fix
+
+- [#233](https://github.com/wix-incubator/rich-content/pull/233) PNG images are loaded as JPG in preload, losing transparency and showing black background
+
+<hr/>
+
+## HTML Plugin 1.5.20 (Jan 16, 2019)
+
+### :bug: Bug Fix
+
+- [#232](https://github.com/wix-incubator/rich-content/pull/232) first time iframe onload is fired before React.render(), so it will not refresh
+
+<hr/>
+
+## Rich Content 1.7.11 (Jan 16, 2019)
+
+### :rocket: New Feature
+
+- `video`
+  - [#231](https://github.com/wix-incubator/rich-content/pull/231) import video with either url or pathname
+
+<hr/>
+
+## 1.7.10 (Jan 14, 2019)
+
+### :rocket: New Feature
+
+- `image`
+  - [#20](https://github.com/wix-incubator/rich-content-plugins-wix/pull/20) original size in mobile
+
+### :bug: Bug Fix
+
+- `video`
+  - [#227](https://github.com/wix-incubator/rich-content/pull/227) themable header + text input design
 - `viewer`
   - [6f5e95b](https://github.com/wix-incubator/rich-content/commit/6f5e95b22a8c85972c82b73f795fc9fb4db81a8e) fixed centering of blocks
 
@@ -68,6 +194,7 @@
 
 - `viewer`
   - [#214](https://github.com/wix-incubator/rich-content/pull/214) soft new line at end of block
+
 ### :house: Internal
 
 - `general`
@@ -87,10 +214,9 @@
   - [#194](https://github.com/wix-incubator/rich-content/pull/194) handle input selection focus and removed border radius on iphone
 - `soundcloud`
   - [#195](https://github.com/wix-incubator/rich-content/pull/195) handle input selection focus on iphone and source url optimisations
-  - [#206](https://github.com/wix-incubator/rich-content/pull/206) replacing insert button icon to a squared one (19*19)
+  - [#206](https://github.com/wix-incubator/rich-content/pull/206) replacing insert button icon to a squared one (19\*19)
 - `mentions`
   - [#204](https://github.com/wix-incubator/rich-content/pull/204) viewer
-
 
 <hr/>
 
@@ -312,6 +438,7 @@
 ### :rocket: New Feature
 
 - `viewer`
+
   - [#134](https://github.com/wix-incubator/rich-content/pull/134) `RichContentViewer` accepts `config` prop for plugin configuration
 
 - `examples`
@@ -339,7 +466,7 @@
 
 ~~- `soundcloud`~~
 
-  ~~- [#92](https://github.com/wix-incubator/rich-content/pull/92) `plugin-sound-cloud` implemented~~
+~~- [#92](https://github.com/wix-incubator/rich-content/pull/92) `plugin-sound-cloud` implemented~~
 
 ### :bug: Bug Fix
 
@@ -459,7 +586,7 @@
   - Theme supports empty css classes
 - `editor`
   - Firefox text editing
-  - Close alignment dropdown when clicke d outside
+  - Close alignment dropdown when clicked outside
 - `image`
   - Transition between `preLoad` and `hiRes` images
 
